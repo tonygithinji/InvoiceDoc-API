@@ -1,3 +1,4 @@
+import { Sequelize } from "sequelize";
 import sequelize from "../db/sequelize";
 
 const models: any = {
@@ -13,5 +14,6 @@ Object.keys(models).forEach((modelName) => {
 });
 
 models.sequelize = sequelize;
+models.Sequelize = Sequelize;
 
 export default models;
