@@ -17,7 +17,10 @@ app.use("/graphql", graphglHTTP({
     schema,
     rootValue: resolvers,
     context: {
-        models
+        models,
+        user: {
+            id: 2
+        }
     }
 }));
 app.get("/playground", expressPlayground({ endpoint: "/graphql" }));

@@ -5,6 +5,7 @@ const models: any = {
     User: sequelize.import("./user"),
     Client: sequelize.import("./client"),
     Invoice: sequelize.import("./invoice"),
+    Item: sequelize.import("./item")
 }
 
 Object.keys(models).forEach((modelName) => {

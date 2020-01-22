@@ -25,6 +25,10 @@ export default (sequelize: Sequelize.Sequelize) => {
         User.hasMany(models.Client, {
             foreignKey: "userId"
         });
+
+        User.hasMany(models.Item, {
+            foreignKey: "userId"
+        });
     }
 
     return User;
