@@ -1,7 +1,7 @@
 export default {
     // Queries
-    getItem: ({ id }: any, { models }: any) => models.Item.findOne({ where: { id } }),
-    allItems: (args: any, { models }: any) => models.Item.findAll(),
+    getItem: ({ id }: any, { models, user }: any) => models.Item.findone({ where: { id, userId: user.id }, include: models.User }),
+    allItems: (args: any, { models, user }: any) => models.Item.findAll({ where: { userId: user.id }, include: models.User }),
 
     // Mutations
     createItem: async (args: any, { models, user }: any) => {

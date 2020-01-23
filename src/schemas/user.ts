@@ -5,6 +5,7 @@ export default `
         lastName: String!
         email: String!
         clients: [Client]
+        items: [Item]
     }
 
     type Query {

@@ -19,7 +19,7 @@ app.use("/graphql", graphglHTTP({
     context: {
         models,
         user: {
-            id: 2
+            id: 3
         }
     }
 }));
