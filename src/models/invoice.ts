@@ -21,6 +21,8 @@ export default (sequelize: Sequelize.Sequelize) => {
 
     Invoice.associate = (models: any) => {
         Invoice.belongsTo(models.Client);
+        Invoice.hasMany(models.InvoiceItem);
+        Invoice.belongsTo(models.User);
     }
 
     return Invoice;
