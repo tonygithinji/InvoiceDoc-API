@@ -7,8 +7,26 @@ export default (sequelize: Sequelize.Sequelize) => {
             allowNull: false
         },
         lastName: DataTypes.STRING,
-        email: DataTypes.STRING,
-        balance: DataTypes.DECIMAL(10, 2)
+        email: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        phoneNumber: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        physicalAddress: {
+            type: DataTypes.STRING(500),
+            allowNull: true
+        },
+        billingAddress: {
+            type: DataTypes.STRING(500),
+            allowNull: true
+        },
+        balance: {
+            type: DataTypes.DECIMAL(10, 2),
+            defaultValue: 0
+        }
     });
 
     Client.associate = (models: any) => {
